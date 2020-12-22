@@ -1,0 +1,25 @@
+.whitney {
+    font-family: Whitney, Roboto, sans-serif;
+}
+
+.blurple {
+    text-decoration: underline;
+    color: #7289DA;
+}
+
+body.dark {
+    background-color: #23272A;
+    color:#99AAB5;
+}
+
+body.light {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+@font-face{
+    font-family: Whitney;
+    src: url(http://discord.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff)
+    format(woff);
+    font-weight: 300;
+}

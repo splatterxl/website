@@ -2,6 +2,8 @@
 <html>
 
   <head>
+    <link rel="stylesheet"
+          href="./base/assets/global.css">
     <meta http-equiv="X-UA-Compatible"
           content="IE=7">
     <meta name="description"
@@ -16,29 +18,40 @@
           content='This is the official website of Splatterxl#8999.'>
     <meta name="og:type"
           name="website">
+    <script src="./base/assets/main.js"
+            defer></script>
+    <script src="./base/assets/theme-loader.js"
+            defer></script>
   </head>
 
-  <body>
+  <body class='whitney'>
+    <fieldset id='fatal-error'
+              hidden>
+      <legend></legend>
+      <p></p>
+    </fieldset>
     <section>
       <fieldset>
         <legend>header text lmao</legend>
         <h1>i am dumb</h1>
         <nav>
-          <a href="http://github.com/Splatterxl/rcorp_files">see my latest failure</a>
+          <js-link id='projects-drop-down-button'
+                   class='blurple'>Projects</js-link>
+          <section class="drop-down"
+                   id="projects-drop-down"></section>
+          <a href="http://github.com/Splatterxl/rcorp_files"
+             class='blurple'>see my latest failure</a>
           |
-          <a href="http://splatterxl.github.io">this thing</a>
+          <a href="http://splatterxl.github.io"
+             class='blurple'>this thing</a>
           |
-          <a href="utilitybot">my discord bot</a>
+          <a href="utilitybot"
+             class='blurple'>my discord bot</a>
         </nav>
       </fieldset>
     </section>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
-
     <script>
       // Your web app's Firebase configuration
       // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -59,29 +72,13 @@
     <!-- Add the standard Performance Monitoring library -->
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-performance.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
-
-    <!-- <script>
-      var provider = new firebase.auth.GoogleAuthProvider();
-      firebase.auth().signInWithPopup(provider).then(function (result)
-      {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        var token = result.credential.accessToken;
-        // The signed-in user info.
-        var user = result.user;
-        // ...
-      }).catch(function (error)
-      {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // The email of the user's account used.
-        var email = error.email;
-        // The firebase.auth.AuthCredential type that was used.
-        var credential = error.credential;
-        // ...
-      });
-    </script> -->
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+    <settings>
+      <js-link id='theme-toggle'
+               class='link'>Toggle Theme (current theme:
+        <script>document.write(localStorage.getItem('theme'))</script>)
+      </js-link>
+    </settings>
   </body>
 
 </html>
