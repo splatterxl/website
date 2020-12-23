@@ -25,10 +25,15 @@
   </head>
 
   <body class='whitney'>
-    <fieldset id='fatal-error'
-              hidden>
-      <legend></legend>
-      <p></p>
+    <noscript>
+      <fieldset>
+        <legend>Fatal Error</legend>
+        <h1>No JavaScript detected</h1>
+        <p>Please turn on JavaScript, as the site relies heavily on it.</p>
+      </fieldset>
+    </noscript>
+    <fieldset hidden>
+      <h1>Are you using a Chromium-based browser?</h1>
     </fieldset>
     <section>
       <fieldset>
@@ -37,17 +42,10 @@
         </h1>
         <nav>
           <js-link id='projects-drop-down-button'
-                   class='blurple'>Projects</js-link>
+                   class='blurple link'>Projects</js-link>
           <section class="drop-down"
                    id="projects-drop-down"></section>
-          <a href="http://github.com/Splatterxl/rcorp_files"
-             class='blurple'>see my latest failure</a>
-          |
-          <a href="http://splatterxl.github.io"
-             class='blurple'>this thing</a>
-          |
-          <a href="utilitybot"
-             class='blurple'>my discord bot</a>
+
         </nav>
       </fieldset>
     </section>

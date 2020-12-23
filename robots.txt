@@ -1,2 +1,6 @@
 User-Agent: *
+Disallow: /utilitybot
+Allow: /
+
+User-Agent: nsa
 Disallow: /

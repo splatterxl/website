@@ -1,4 +1,10 @@
-document.querySelector('fieldset nav js-link#projects-drop-down-button').addEventListener('click', () => document.getElementById('projects-drop-down').innerHTML = '<a href=\'utilitybot\' class=\'blurple\'>UtilityBot</a>');
+document.querySelector('fieldset nav js-link#projects-drop-down-button').addEventListener('click', () =>
+{
+    document.getElementById('projects-drop-down').innerHTML =
+        !(document.getElementById('projects-drop-down').innerHTML == `<a href=\"http://github.com/Splatterxl/rcorp_files\" class=\"blurple\">see my latest failure</a>\n|\n<a href=\"http://splatterxl.github.io\" class=\"blurple\">this thing</a>\n|\n<a href=\"utilitybot\" class=\"blurple\">my discord bot</a>`)
+            ? `<a href="http://github.com/Splatterxl/rcorp_files"\nclass='blurple'>see my latest failure</a>\n|\n<a href="http://splatterxl.github.io"\nclass='blurple'>this thing</a>\n|\n<a href="utilitybot"\nclass='blurple'>my discord bot</a>`
+            : ' ';
+});
 document.querySelector('settings js-link#theme-toggle').addEventListener('click', () =>
 {
     if (localStorage.getItem('theme') == null || localStorage.getItem('theme') == 'light') localStorage.setItem('theme', 'dark'); else if (localStorage.getItem('theme') == 'dark') localStorage.setItem('theme', 'light');
@@ -23,9 +29,6 @@ elem.textContent = '';
 
 
 
-// I have to push, wait a sec
-// https://splatterxl.tk
-// Alright, I just forgot it lmao
 
 const anim = () =>
 {
@@ -42,4 +45,4 @@ const anim = () =>
 setInterval(() =>
 {
     anim();
-}, 500);
+}, parseInt(351..toString()));
