@@ -1,9 +1,13 @@
+.link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .whitney {
     font-family: Whitney, Roboto, sans-serif;
 }
 
 .blurple {
-    text-decoration: underline;
     color: #7289DA;
 }
 
@@ -17,9 +21,10 @@ body.light {
     background-color: #ffffff;
 }
 
-@font-face{
+/* @font-face{
     font-family: Whitney;
     src: url(http://discord.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff)
     format(woff);
     font-weight: 300;
-}
+    format: 'woff';
+} */
