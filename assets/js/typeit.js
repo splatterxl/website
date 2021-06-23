@@ -17,9 +17,7 @@ document.querySelector(
 document.querySelector('#cmd-res .please-wait').textContent = 'Please wait...';
 
 await sleep(3000);
-if (location.pathname === '/404') {
-  const nocontent = document.querySelector('#cmd-res .nocontent');
-  nocontent.textContent = 'No content found for this page.';
-  nocontent.hidden = false;
-  nocontent['aria-hidden'] = false;
-}
+const nocontent = document.querySelector('#cmd-res .nocontent');
+nocontent.textContent = 'No content found for this page.';
+nocontent.hidden = false;
+nocontent['aria-hidden'] = false;
