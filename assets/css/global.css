@@ -30,3 +30,8 @@ a,
 a:visited {
   color: var(--text-color) !important;
 }
+
+nav {
+  align-items: right;
+  text-align: right;
+}
