@@ -1,5 +1,5 @@
 const id = decodeURIComponent(location.hash.slice(1));
-const md = new Remarkable.Remarkable();
+const md = new Remarkable();
 
 try {
   fetch(`/blog/inject/articles/${id}.md`)
