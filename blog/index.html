@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/assets/css/global.css" />
     <link rel="stylesheet" href="/assets/css/home.css" />
     <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/remarkable@2/dist/remarkable.js"></script>
     <!-- Primary Meta Tags -->
 
     <!-- Embed previews -->
@@ -36,14 +37,14 @@
     />
 
     <!-- End of Embed Previews -->
+
   </head>
 
   <body>
     <div id="text">
-      <h1>Splatterxl</h1>
+      <h1>Splatterxl's Blog</h1>
       <p>
-        I'm a developer. Yeah, that's it. I develop a few things you
-        <i>might</i> use, but don't.
+        Here's where I rant about issues in life and programming, and about just how it generally sucks being me.
       </p>
     </div>
     <hr />
@@ -51,10 +52,12 @@
       <a href="/">Home</a> | <a href="/projects">Projects</a> |
       <a href="/blog">Blog</a>
     </nav>
-    <article>
-      <h1>Not Found</h1>
-      This page was not found in the server. Did you mean:
-      <a href="//www.youtube.com/watch?v=dQw4w9WgXcQ">Blog</a>?
+    <article id="main">
+      <h1 id="main-h1">Loading...</h1>
+      <p id="main-p">We're fetching your requested article! Hold tight...</p>
     </article>
+
+
+    <script src="/assets/js/blog.js"></script>
   </body>
 </html>
