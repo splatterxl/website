@@ -1,7 +1,7 @@
 import { Remarkable } from "https://cdn.jsdelivr.net/npm/remarkable@2/dist/esm/index.browser.js";
 const md = new Remarkable();
 
-const id = decodeURIComponent(location.hash.slice(1));
+const id = decodeURIComponent(location.search.slice(3));
 
 try {
   fetch(`/blog/inject/articles/${id}.md`)
