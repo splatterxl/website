@@ -1,5 +1,5 @@
 # Remarkable Test
 
-This **test** is *very* remarkable[^first]
+This **test** is _very_ remarkable[^first]
 
 [^first]: aaaaa
