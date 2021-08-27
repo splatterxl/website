@@ -1,5 +1,5 @@
-# Hi
+# Remarkable Test
 
-- uwu owo uwu
+This **test** is *very* remarkable[^first]
 
-somehow this doesn't work
+[^first]: aaaaa

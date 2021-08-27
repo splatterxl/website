@@ -1,5 +1,7 @@
-const id = decodeURIComponent(location.hash.slice(1));
+import { Remarkable } from "https://cdn.jsdelivr.net/npm/remarkable@2/dist/esm/index.browser.js";
 const md = new Remarkable();
+
+const id = decodeURIComponent(location.hash.slice(1));
 
 try {
   fetch(`/blog/inject/articles/${id}.md`)
@@ -22,7 +24,7 @@ try {
   /**
    * @param {string} body
    */
-  function constructArticle(body) { return body; }
+  function constructArticle(body) { return md.render(body); }
 } catch (e) {
   document.querySelector("#main h1").textContent = "Oops!";
   document.querySelector("#main p").textContent =
