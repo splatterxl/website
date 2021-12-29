@@ -1,11 +1,16 @@
 @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css);
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Quicksand&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+  --accent: #17aab5;
+}
 
 body {
   padding: 2%;
-  border: 1px solid black;
   padding-bottom: 10%;
   margin: 2%;
-  background-color: rgb(230, 208, 174);
+  background-color: white;
+  font-family: 'Open Sans', sans-serif;
 }
 
 header {
@@ -53,4 +58,52 @@ td {
 
 #stats {
   align-items: center;
+}
+
+h1 {
+  font-family: Ubuntu, sans-serif;
+  color: var(--accent);
+}
+
+a:link,
+a:visited {
+  color: black;
+  text-decoration: underline;
+}
+
+a:hover, a.special {
+  color: var(--accent);
+  text-decoration: var(--accent) underline;
+}
+
+
+footer a:link,
+footer a:visited {
+  color: gray;
+  text-decoration: gray underline;
+}
+
+footer {
+  color: gray;
+}
+
+body { 
+  height: 100vh;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* make footer stay at bottom of page */
+body { 
+  display: flex; 
+  flex-direction: column; 
+}
+
+footer {
+  border-top: 1px solid black;
+  margin-top: auto; 
+}
+
+.accent {
+  color: var(--accent);
 }
