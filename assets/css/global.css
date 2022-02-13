@@ -71,11 +71,11 @@ a:visited {
   text-decoration: underline;
 }
 
-a:hover, a.special {
+a:hover,
+a.special {
   color: var(--accent);
   text-decoration: var(--accent) underline;
 }
-
 
 footer a:link,
 footer a:visited {
@@ -87,21 +87,21 @@ footer {
   color: gray;
 }
 
-body { 
+body {
   height: 100vh;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
 /* make footer stay at bottom of page */
-body { 
-  display: flex; 
-  flex-direction: column; 
+body {
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
   border-top: 1px solid black;
-  margin-top: auto; 
+  margin-top: auto;
 }
 
 .accent {
