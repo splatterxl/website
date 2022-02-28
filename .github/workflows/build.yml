@@ -31,8 +31,9 @@ jobs:
         run: |
           cd new
           node deploy.js
-          mv * ../deploy
           cd ../deploy
+          rm -rf "*"
+          mv ../new/* .
 
       - name: Deploy
         run: |
