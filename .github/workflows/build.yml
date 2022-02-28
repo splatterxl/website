@@ -37,6 +37,7 @@ jobs:
 
       - name: Deploy
         run: |
+          cd deploy
           git fetch
           git checkout deploy
           git add .
