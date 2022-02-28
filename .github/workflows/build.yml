@@ -32,7 +32,7 @@ jobs:
           cd new
           node deploy.js
           cd ../deploy
-          rm -rf *
+          rm -rf about .hooks assets blog keys contact
           mv ../new/* .
 
       - name: Deploy
