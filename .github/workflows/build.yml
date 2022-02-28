@@ -14,7 +14,7 @@ jobs:
           path: 'new'
       - uses: actions/checkout@v2
         with:
-          path: 'deploy:'
+          path: 'deploy'
           ref: 'deploy'
 
       - name: Install Node v16
