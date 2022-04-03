@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Badges } from '../components/Badges';
 import { Codestats } from '../components/Codestats';
 import { Projects } from '../components/Projects';
 import { Zen } from '../components/Zen';
