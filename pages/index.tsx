@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Codestats } from '../components/Codestats';
+import { GithubData } from '../components/GithubData';
 import { Projects } from '../components/Projects';
 import { Zen } from '../components/Zen';
 import styles from '../styles/Home.module.css';
@@ -39,9 +40,7 @@ const Home: NextPage = () => {
           developer, with a knack for breaking things.
         </p>
 
-        <div className={styles.grid}>
-          <Projects />
-        </div>
+        <GithubData />
       </main>
 
       <footer className={styles.footer}>

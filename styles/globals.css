@@ -14,3 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+hr {
+  border: 3px solid black;
+  margin: 0;
+  padding: 0;
+}
