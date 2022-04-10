@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['img.shields.io'],
+    domains: ['github.com'],  // allow images from this domain
   },
   generateEtags: true,
 };

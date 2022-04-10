@@ -24,11 +24,13 @@ export const GithubData: React.FC = () => {
 
   return (
     <div className={styles.container}>
+      <h2>
+        <Link href={data.html_url}>GitHub Statistics</Link>
+      </h2>
+      Followers: {data.followers} | Following: {data.following} | Repos: {data.public_repos}
       <hr />
-      <h1>
-        <Link href={data.html_url}>GitHub</Link>
-      </h1>
       <div className={styles.grid}>
+        <h3>Top Projects</h3>
         <Projects />
       </div>
     </div>

@@ -12,7 +12,6 @@ export const Card: React.FC<{
 
   const elem = (
     <div className={styles.card}>
-      {options.icon && <Image src={options.icon} alt={name} />}
       <h2>{name}</h2>
       <p>{description}</p>
     </div>
