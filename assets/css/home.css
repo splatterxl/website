@@ -10,7 +10,10 @@ h1 {
 body {
   background-image: url(/assets/img/aurora-borealis.jpg);
   background-size: cover;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 
 article {
@@ -32,7 +35,7 @@ article {
   height: max(auto, 16%);
 }
 
-article > h1 {
+article>h1 {
   font-weight: bold;
   display: border-box;
   padding-top: 10px;
@@ -40,7 +43,7 @@ article > h1 {
   opacity: 1;
 }
 
-article > img {
+article>img {
   position: absolute;
   top: 0;
   right: 0;
@@ -49,12 +52,12 @@ article > img {
   display: inline-block;
 }
 
-article > div {
+article>div {
   padding-top: 5px;
 }
 
 @media only screen and (max-width: 500px) {
-  article > img {
+  article>img {
     display: none;
   }
 }
@@ -80,7 +83,7 @@ article > img {
 p,
 div {
   color: white;
-  opacity: 1 !important;
+  opacity: 1;
 }
 
 a:link,
