@@ -40,7 +40,7 @@ const Home: NextPage = () => {
           developer, with a knack for breaking things.
         </p>
 
-        <GithubData />
+        {/* <GithubData /> */}
       </main>
 
       <footer className={styles.footer}>

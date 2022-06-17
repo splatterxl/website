@@ -22,6 +22,6 @@ export const Projects: React.FC<ProjectsConfig> = ({ limit = 5 }) => {
   if (!data) return <div>Loading GitHub data...</div>;
 
   return <div className={styles.grid}>{data.slice(0, limit).map(v => {
-    return <Card name={v.name} description={v.description} link={v.html_url} icon="https://github.com/favicon.ico"/>
+    return <Card key={v.name} name={v.name} description={v.description} link={v.html_url} icon="https://github.com/favicon.ico"/>
     })}</div>;
 };
