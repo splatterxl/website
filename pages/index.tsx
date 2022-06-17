@@ -37,7 +37,10 @@ const Home: NextPage = () => {
           <span className={styles.link}>
             <Link href={'https://typescriptlang.org'}>TypeScript</Link>
           </span>{' '}
-          developer, with a knack for breaking things.
+          developer with a knack for breaking things.{' '}
+          <span className={styles.link}>
+            <Link href={'https://github.com/splatterxl'}>Learn more</Link>
+          </span>
         </p>
 
         {/* <GithubData /> */}
@@ -45,7 +48,7 @@ const Home: NextPage = () => {
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://vercel.com"
           target="_blank"
           rel="noopener noreferrer"
         >
