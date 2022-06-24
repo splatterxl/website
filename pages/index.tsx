@@ -1,16 +1,25 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Codestats } from '../components/Codestats';
-import { GithubData } from '../components/GithubData';
-import { Projects } from '../components/Projects';
-import { Zen } from '../components/Zen';
+import { motion } from 'framer-motion';
 import styles from '../styles/Home.module.css';
+import { BouncingDownArrow } from '../components/BouncingDownArrow';
+import React from 'react';
+import { DownArrow } from '../components/DownArrow';
+import { Pronouns } from '../components/Pronouns';
 
 const Home: NextPage = () => {
+  const [innerHeight, setInnerHeight] = React.useState(0);
+
+  React.useEffect(() => {
+    setInnerHeight(window.innerHeight);
+  }, []);
+
+  if (innerHeight === 0) {
+    return <div />;
+  }
+
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Splatterxl</title>
         <meta
@@ -21,44 +30,69 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Splatterxl</h1>
-        <Zen />
-
-        <p className={styles.description}>
-          I&apos;m a{' '}
-          <span className={styles.link}>
-            <Link href={'https://rustlang.org'}>Rust</Link>
-          </span>
-          ,{' '}
-          <span className={styles.link}>
-            <Link href={'https://elixir-lang.org'}>Elixir</Link>
-          </span>{' '}
-          and{' '}
-          <span className={styles.link}>
-            <Link href={'https://typescriptlang.org'}>TypeScript</Link>
-          </span>{' '}
-          developer with a knack for breaking things.{' '}
-          <span className={styles.link}>
-            <Link href={'https://github.com/splatterxl'}>Learn more</Link>
-          </span>
-        </p>
-
-        {/* <GithubData /> */}
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
+          className={styles.container}
+          style={{
+            height: '100vh',
+            width: '100%',
+            backgroundColor: '#fafafa',
+          }}
         >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
-    </div>
+          <div className={styles.header}>
+            <motion.h1
+              className={styles.title}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              Splatterxl
+            </motion.h1>
+            <Pronouns />
+          </div>
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className={styles.description}>
+              Backend engineer, frontend designer and almost everything in
+              between.
+            </p>
+          </motion.div>
+        </div>
+        <DownArrow innerHeight={innerHeight} />
+        <div className={styles.section} style={{}}>
+          <h2
+            style={{
+              marginBlockEnd: 0,
+            }}
+          >
+            Soon...
+          </h2>
+          <p
+            style={{
+              marginBlockStart: 0,
+              textAlign: 'center',
+            }}
+          >
+            Something will be here later. In the meantime, check out my{' '}
+            <a
+              href="https://github.com/splatterxl"
+              style={{
+                textDecoration: 'underline',
+              }}
+            >
+              GitHub profile
+            </a>
+            !
+          </p>
+        </div>
+      </main>
+    </>
   );
 };
 
