@@ -1,27 +1,3 @@
-.container {
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  display: flex;
-  height: 100vh;
-  padding: 3em;
-}
-
-.main {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
 .pronouns {
   display: flex;
   justify-content: flex-end;
@@ -30,14 +6,6 @@
 
 .pronounsText {
   font-style: italic;
-}
-
-.downArrow {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  width: 0;
-  height: 0;
 }
 
 .navbar {
@@ -68,14 +36,9 @@
 }
 
 .title {
-  margin: 0;
+  font-size: 6em;
+  font-weight: bold;
   line-height: 1.15;
-  font-size: 6rem;
-}
-
-.description {
-  margin-block-start: 0;
-  text-align: center;
 }
 
 @media (max-width: 700px) {
@@ -92,10 +55,6 @@
   .pronouns {
     display: none;
   }
-}
-
-.downArrowLink {
-  cursor: pointer;
 }
 
 .section {

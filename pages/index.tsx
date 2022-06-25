@@ -8,16 +8,6 @@ import { DownArrow } from '../components/DownArrow';
 import { Pronouns } from '../components/Pronouns';
 
 const Home: NextPage = () => {
-  const [innerHeight, setInnerHeight] = React.useState(0);
-
-  React.useEffect(() => {
-    setInnerHeight(window.innerHeight);
-  }, []);
-
-  if (innerHeight === 0) {
-    return <div />;
-  }
-
   return (
     <>
       <Head>
@@ -29,63 +19,47 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <div
-          className={styles.container}
-          style={{
-            height: '100vh',
-            width: '100%',
-            backgroundColor: '#fafafa',
-          }}
-        >
-          <div className={styles.header}>
-            <motion.h1
-              className={styles.title}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              Splatterxl
-            </motion.h1>
-            <Pronouns />
-          </div>
-          <motion.div
-            initial={{
-              opacity: 0,
-            }}
-            animate={{
-              opacity: 1,
-            }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className={styles.description}>
-              Backend engineer, frontend designer and almost everything in
-              between.
-            </p>
-          </motion.div>
-        </div>
-        <DownArrow innerHeight={innerHeight} />
-        <div className={styles.section} style={{}}>
-          <h2
-            style={{
-              marginBlockEnd: 0,
-            }}
-          >
-            Soon...
-          </h2>
-          <p
-            style={{
-              marginBlockStart: 0,
-              textAlign: 'center',
-            }}
-          >
-            Something will be here later. In the meantime, check out my{' '}
-            <a
-              href="https://github.com/splatterxl"
-              style={{
-                textDecoration: 'underline',
+      <main
+        className="top-0 left-0 flex flex-col w-full"
+        style={{
+          position: 'absolute',
+        }}
+      >
+        <div className="w-full h-screen flex flex-col justify-center items-center p-12 bg-slate-50">
+          <div>
+            <div className="flex flex-row justify-center">
+              <motion.h1
+                className={styles.title}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                Splatterxl
+              </motion.h1>
+              <Pronouns />
+            </div>
+            <motion.div
+              initial={{
+                opacity: 0,
               }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{ duration: 0.6 }}
             >
+              <p className="mt-0 text-center">
+                Backend engineer, frontend designer and almost everything in
+                between.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+        <DownArrow />
+        <div className="flex justify-center items-center flex-col w-full p-8 h-screen bg-slate-100">
+          <h2 className="mb-0 font-bold text-2xl">Soon...</h2>
+          <p className="text-center mb-0">
+            Something will be here later. In the meantime, check out my{' '}
+            <a href="https://github.com/splatterxl" className="underline">
               GitHub profile
             </a>
             !
