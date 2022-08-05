@@ -1,9 +1,6 @@
+import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import styles from '../styles/Home.module.css';
-import React from 'react';
-import { DownArrow } from '../components/DownArrow';
 import { Pronouns } from '../components/Pronouns';
 
 const Home: NextPage = () => {
@@ -21,9 +18,9 @@ const Home: NextPage = () => {
       <main className="top-0 left-0 absolute flex flex-col w-full">
         <div className="w-full h-screen flex flex-col justify-center items-center p-12 bg-slate-50">
           <div className="pb-5">
-            <div className="flex flex-row justify-center">
+            <div className="flex flex-row justify-center pb-1">
               <motion.h1
-                className="text-5xl xxs:text-7xl md:text-9xl leading-tight md:leading-snug font-bold"
+                className="text-5xl xxs:text-7xl md:text-9xl font-bold"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
@@ -48,7 +45,7 @@ const Home: NextPage = () => {
             </motion.div>
           </div>
         </div>
-        <DownArrow />
+        {/* <DownArrow />
         <div className="flex justify-center items-center flex-col w-full p-8 h-screen bg-slate-100">
           <h2 className="mb-0 font-bold text-2xl">Soon...</h2>
           <p className="text-center mb-0">
@@ -58,7 +55,7 @@ const Home: NextPage = () => {
             </a>
             !
           </p>
-        </div>
+        </div> */}
       </main>
     </>
   );

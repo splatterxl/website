@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import type { AppProps } from 'next/app';
+import '../util/console';
 
 export default function Portfolio({ Component, pageProps }: any) {
   return <Component {...pageProps} />;
