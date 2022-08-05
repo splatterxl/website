@@ -1,4 +1,5 @@
-console.log(
+export default function() {
+  console.log(
   `
 %c                ___@@@@@@@@@@       @@@@@@@@@@
                    @@@@@@@@@@@@@@   @@@@@@@@@@@@@@
@@ -25,5 +26,4 @@ console.log(
   'font-size:1rem;font-weight:bold;color:#1BB3FF;',
   'font-size:1rem'
 );
-
-export {};
+  }
