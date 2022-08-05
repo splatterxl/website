@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-const zens = [
+export const zens = [
   'When you realize nothing is lacking, the whole world belongs to you. Lao Tzu',
   'Let go, or be dragged. Zen proverb',
   'What the superior man seeks is in himself; what the small man seeks is in others. Confucius',
