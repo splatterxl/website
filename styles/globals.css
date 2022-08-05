@@ -19,6 +19,6 @@ a {
   box-sizing: border-box;
 }
 
-.-pos-screen-100 {
+.top-screen {
   top: calc(100vh - 100px);
 }

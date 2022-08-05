@@ -6,6 +6,13 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    screens: {
+      xs: '467px',
+      xxs: '320px',
+      'xs-h': {
+        raw: '(min-height: 467px)',
+      },
+    },
   },
   plugins: [],
 };

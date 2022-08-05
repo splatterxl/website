@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import styles from '../styles/Home.module.css';
-import { BouncingDownArrow } from '../components/BouncingDownArrow';
 import React from 'react';
 import { DownArrow } from '../components/DownArrow';
 import { Pronouns } from '../components/Pronouns';
@@ -19,17 +18,12 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main
-        className="top-0 left-0 flex flex-col w-full"
-        style={{
-          position: 'absolute',
-        }}
-      >
+      <main className="top-0 left-0 absolute flex flex-col w-full">
         <div className="w-full h-screen flex flex-col justify-center items-center p-12 bg-slate-50">
-          <div>
+          <div className="pb-5">
             <div className="flex flex-row justify-center">
               <motion.h1
-                className={styles.title}
+                className="text-5xl xxs:text-7xl md:text-9xl leading-tight md:leading-snug font-bold"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}

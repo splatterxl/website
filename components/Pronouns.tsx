@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 
 export const Pronouns: React.FC = () => {
   return (
-    <div className={styles.pronouns}>
+    <div className="justify-end flex-col hidden xs:flex" aria-hidden>
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className={styles.pronounsText}
+        className="italic"
       >
         he/him
       </motion.span>

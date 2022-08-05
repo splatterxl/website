@@ -4,14 +4,16 @@ import { BouncingDownArrow } from './BouncingDownArrow';
 
 export const DownArrow: React.FC = () => {
   return (
-    <motion.div
-      className="absolute left-2/4 w-0 h-0 select-none -pos-screen-100"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1, delay: 0.5 }}
-    >
-      <Inner />
-    </motion.div>
+    <div className="hidden xs-h:flex items-center justify-center flex-row absolute top-screen left-0 w-full">
+      <motion.div
+        className="w-0 h-0 select-none "
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
+        <Inner />
+      </motion.div>
+    </div>
   );
 };
 

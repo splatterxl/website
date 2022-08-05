@@ -1,10 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  images: {
-    domains: ['github.com'],  // allow images from this domain
+  async redirects() {
+    return [
+      {
+        source: '/en/home',
+        destination: '/',
+        permanent: false,
+      },
+    ];
   },
-  generateEtags: true,
 };
 
 module.exports = nextConfig;
