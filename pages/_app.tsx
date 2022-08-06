@@ -1,8 +1,11 @@
 import '../styles/globals.css';
-import console from '../util/console';
+import '../util/console';
+import { DisappearProvider } from '../util/Disappear';
 
 export default function Portfolio({ Component, pageProps }: any) {
-  console();
-
-  return <Component {...pageProps} />;
+  return (
+    <DisappearProvider>
+      <Component {...pageProps} />
+    </DisappearProvider>
+  );
 }

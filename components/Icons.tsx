@@ -1,7 +1,7 @@
-import Link from 'next/link';
 import { CgProfile } from 'react-icons/cg';
 import { FaGithub, FaTwitter } from 'react-icons/fa';
 import { Appear } from './Appear';
+import { Link } from './Link';
 
 const links = [
   { icon: FaGithub, url: 'https://github.com/splatterxl' },
@@ -12,13 +12,11 @@ const links = [
 
 export const Icons: React.FC = () => {
   return (
-    <Appear duration={1}>
+    <Appear duration={1} id="icons">
       <div className="flex flex-row justify-center items-center mt-3 gap-3">
         {links.map((link) => (
-          <Link key={link.url} href={link.url} passHref>
-            <a>
-              <link.icon size="1.5rem" />
-            </a>
+          <Link key={link.url} href={link.url}>
+            <link.icon size="1.5rem" />
           </Link>
         ))}
       </div>

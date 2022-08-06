@@ -1,21 +1,15 @@
-import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Appear } from '../components/Appear';
 import { Icons } from '../components/Icons';
+import { Meta } from '../components/Meta';
 import { Pronouns } from '../components/Pronouns';
-import { Tooltip } from '../components/Tooltip';
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Splatterxl</title>
-        <meta
-          name="description"
-          content="typescript, rust, elixir. constantly breaking important stuff"
-        />
-        <link rel="icon" href="/favicon.ico" />
+        <Meta />
       </Head>
 
       <main className="top-0 left-0 absolute flex flex-col w-full">
@@ -26,12 +20,13 @@ const Home: NextPage = () => {
                 className="text-5xl xxs:text-7xl md:text-9xl font-bold"
                 duration={0.5}
                 as="h1"
+                id="head"
               >
                 Splatterxl
               </Appear>
               <Pronouns />
             </div>
-            <Appear duration={0.6}>
+            <Appear duration={0.6} id="desc">
               <p className="mt-0 text-center">
                 Backend engineer, frontend designer and almost everything in
                 between.
