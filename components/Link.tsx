@@ -1,12 +1,10 @@
-import { useRouter } from 'next/router';
-import { AnchorHTMLAttributes, DetailedHTMLProps, useContext } from 'react';
-import { DisappearerContext } from '../util/Disappear';
+import { AnchorHTMLAttributes, DetailedHTMLProps } from 'react';
+import usePageTransition from '../util/transition';
 
 export const Link: React.FC<
   DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>
 > = (props) => {
-  const router = useRouter(),
-    [, refs, unregister] = useContext(DisappearerContext);
+  const transition = usePageTransition(props.href);
 
   return (
     <a
@@ -15,6 +13,8 @@ export const Link: React.FC<
         props.href
           ? async (event) => {
               event.preventDefault();
+
+              await transition.doTransition();
             }
           : undefined
       }

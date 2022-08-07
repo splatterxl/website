@@ -5,7 +5,7 @@ type PromisedVoidFunction = () => Promise<void>;
 export const DisappearerContext = React.createContext<
   [
     (doDisappear: PromisedVoidFunction, id: string) => void,
-    [VoidFunction, string][],
+    [PromisedVoidFunction, string][],
     VoidFunction
   ]
 >([null as any, [], null as any]);

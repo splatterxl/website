@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { DisappearerContext } from '../util/Disappear';
+import { DisappearerContext } from '../util/TransitionProvider';
 
 const FADE_OUT_DURATION = 0.2;
 

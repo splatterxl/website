@@ -1,17 +1,26 @@
+import { useRouter } from 'next/router';
 import { useContext } from 'react';
-import { DisappearerContext } from './Disappear';
+import { DisappearerContext } from './TransitionProvider';
 
-export default function usePageTransition(href: string) {
+export default function usePageTransition(href?: string) {
   const [, hooks, removeAll] = useContext(DisappearerContext);
+  const router = useRouter();
+
+  if (!href) return { async doTransition() {} };
 
   return {
-    doTransition: () =>
-      Promise.all(
+    doTransition: () => {
+      console.log('transitioning to', href);
+      return Promise.all(
         hooks.map(([hook, id]) =>
           hook().then(() => {
-            console.debug('doing elem transition', id);
+            console.debug('done elem transition', id);
           })
         )
-      ).then(() => removeAll()),
+      ).then(() => {
+        removeAll();
+        router.push(href);
+      });
+    },
   };
 }
