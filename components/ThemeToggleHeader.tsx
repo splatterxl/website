@@ -7,9 +7,11 @@ export const ThemeToggleHeader: React.FC = () => {
   return (
     <header
       className="flex flex-row justify-center pb-1 group hover:cursor-pointer"
-      onClick={() => {
-        setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
-      }}
+      onClick={() =>
+        setTimeout(() => {
+          setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+        }, 150)
+      }
     >
       <Appear duration={0.5}>
         <h1 className="text-5xl xxs:text-7xl md:text-9xl font-bold select-none group-active:translate-y-1">

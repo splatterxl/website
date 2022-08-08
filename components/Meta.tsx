@@ -18,6 +18,7 @@ export const Meta: React.FC<{ page?: string }> = ({ page }) => (
       content="/assets/e0e3e0f61d042aa38595bc8e09f2b687c0ec519c.png"
     /> */}
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Splatterxl" />
     <meta property="og:locale" content="en_GB" />
     <meta name="theme-color" content="#1cbe65" />
     <link

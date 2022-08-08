@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="top-0 left-0 absolute flex flex-col w-full">
-        <div className="w-full h-screen flex flex-col justify-center items-center p-12 bg-gradient-to-t from-slate-300 to-slate-50 dark:from-slate-900 dark:to-slate-700 dark:text-slate-50">
+        <div className="w-full h-screen flex flex-col justify-center items-center p-12 bg-gradient-to-t from-slate-300 to-slate-50 dark:from-slate-900 dark:to-slate-700 dark:text-slate-50 transition ease-in-out duration-300">
           <noscript></noscript>
           <div className="pb-5">
             <ThemeToggleHeader />
