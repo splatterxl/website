@@ -1,13 +1,13 @@
-import { CgProfile } from 'react-icons/cg';
+import Link from 'next/link';
 import { FaGithub, FaTwitter } from 'react-icons/fa';
+import { IoMdContact } from 'react-icons/io';
 import { Appear } from './Appear';
-import { Link } from './Link';
 
 const links = [
-  { icon: FaGithub, url: 'https://github.com/splatterxl' },
-  { icon: FaTwitter, url: 'https://twitter.com/wontfixbug' },
-  // { icon: IoMdContact, url: 'mailto:splatterxl@outlook.ie' },
-  { icon: CgProfile, url: '/about' },
+  { icon: FaGithub, url: 'https://github.com/splatterxl', name: 'GitHub' },
+  { icon: FaTwitter, url: 'https://twitter.com/wontfixbug', name: 'Twitter' },
+  { icon: IoMdContact, url: 'mailto:splatterxl@outlook.ie', name: 'Email' },
+  // { icon: CgProfile, url: '/about', name: 'About' },
 ];
 
 export const Icons: React.FC = () => {
@@ -15,8 +15,17 @@ export const Icons: React.FC = () => {
     <Appear duration={1} id="icons">
       <div className="flex flex-row justify-center items-center mt-3 gap-3">
         {links.map((link) => (
-          <Link key={link.url} href={link.url}>
-            <link.icon size="1.5rem" />
+          <Link key={link.url} href={link.url} passHref>
+            <a aria-labelledby={link.name + '__label'}>
+              <link.icon size="1.5rem" />
+              <span
+                style={{ display: 'none' }}
+                aria-hidden={false}
+                id={link.name + '__label'}
+              >
+                {link.name}
+              </span>
+            </a>
           </Link>
         ))}
       </div>

@@ -1,12 +1,11 @@
-import { useRouter } from 'next/router';
+import { ThemeProvider } from 'next-themes';
 import '../styles/globals.css';
 import '../util/console';
-import { DisappearProvider } from '../util/TransitionProvider';
 
 export default function Portfolio({ Component, pageProps }: any) {
   return (
-    <DisappearProvider>
+    <ThemeProvider>
       <Component {...pageProps} />
-    </DisappearProvider>
+    </ThemeProvider>
   );
 }

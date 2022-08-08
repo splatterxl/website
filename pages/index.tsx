@@ -3,31 +3,23 @@ import Head from 'next/head';
 import { Appear } from '../components/Appear';
 import { Icons } from '../components/Icons';
 import { Meta } from '../components/Meta';
-import { Pronouns } from '../components/Pronouns';
+import { ThemeToggleHeader } from '../components/ThemeToggleHeader';
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
         <Meta />
+        <title>Splatterxl</title>
       </Head>
 
       <main className="top-0 left-0 absolute flex flex-col w-full">
-        <div className="w-full h-screen flex flex-col justify-center items-center p-12 bg-slate-50">
+        <div className="w-full h-screen flex flex-col justify-center items-center p-12 bg-gradient-to-t from-slate-300 to-slate-50 dark:from-slate-900 dark:to-slate-700 dark:text-slate-50">
+          <noscript></noscript>
           <div className="pb-5">
-            <div className="flex flex-row justify-center pb-1 pr-8">
-              <Appear
-                className="text-5xl xxs:text-7xl md:text-9xl font-bold"
-                duration={0.5}
-                as="h1"
-                id="head"
-              >
-                Splatterxl
-              </Appear>
-              <Pronouns />
-            </div>
+            <ThemeToggleHeader />
             <Appear duration={0.6} id="desc">
-              <p className="mt-0 text-center">
+              <p className="mt-0 text-center select-none">
                 Backend engineer, frontend designer and almost everything in
                 between.
               </p>
