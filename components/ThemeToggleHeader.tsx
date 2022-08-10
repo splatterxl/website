@@ -1,5 +1,5 @@
+import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
-import { Appear } from './Appear';
 
 export const ThemeToggleHeader: React.FC = () => {
   const { setTheme, resolvedTheme } = useTheme();
@@ -13,21 +13,17 @@ export const ThemeToggleHeader: React.FC = () => {
         }, 150)
       }
     >
-      <Appear
-        duration={0.5}
-        as="h1"
+      <h1
         className="text-5xl xxs:text-7xl md:text-9xl font-bold select-none group-active:translate-y-1"
       >
         Splatterxl
-      </Appear>
-      <div
-        className="justify-end flex-col hidden xs:flex group-active:translate-y-1 select-none"
+      </h1>
+      <span
         aria-hidden
+        className="justify-end flex-col hidden xs:flex group-active:translate-y-1 select-none italic"
       >
-        <Appear duration={0.8}>
-          <span className="select-none italic">he/him</span>
-        </Appear>
-      </div>
+        he/him
+      </span>
     </header>
   );
 };
