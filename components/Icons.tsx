@@ -12,23 +12,25 @@ const links = [
 
 export const Icons: React.FC = () => {
   return (
-    <Appear duration={1} id="icons">
-      <div className="flex flex-row justify-center items-center mt-3 gap-3">
-        {links.map((link) => (
-          <Link key={link.url} href={link.url} passHref>
-            <a aria-labelledby={link.name + '__label'}>
-              <link.icon size="1.5rem" />
-              <span
-                style={{ display: 'none' }}
-                aria-hidden={false}
-                id={link.name + '__label'}
-              >
-                {link.name}
-              </span>
-            </a>
-          </Link>
-        ))}
-      </div>
+    <Appear
+      duration={1}
+      id="icons"
+      className="flex flex-row justify-start items-center mt-3 ml-4 gap-3 w-full"
+    >
+      {links.map((link) => (
+        <Link key={link.url} href={link.url} passHref>
+          <a aria-labelledby={link.name + '__label'}>
+            <link.icon size="1.5rem" />
+            <span
+              style={{ display: 'none' }}
+              aria-hidden={false}
+              id={link.name + '__label'}
+            >
+              {link.name}
+            </span>
+          </a>
+        </Link>
+      ))}
     </Appear>
   );
 };
