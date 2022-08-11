@@ -29,7 +29,6 @@ export const Appear: React.FC<{
 
   return (
     <>
-      <noscript>{children}</noscript>
       <div
         {...props}
         className={`md:transition-all md:duration-300 ${
