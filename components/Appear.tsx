@@ -16,7 +16,7 @@ export const Appear: React.FC<{
     setTimeout(() => {
       if (containerRef.current) {
         // remove transition duration that conflicts with the theme transition
-        containerRef.current.className = 'md:w-[67vw] lg:w-[60vw]';
+        containerRef.current.className = 'md:w-[68vw] lg:w-[60vw]';
       }
 
       if (opacityRef.current) {
@@ -34,7 +34,7 @@ export const Appear: React.FC<{
         className={`md:transition-all md:duration-300 ${
           !isMounted
             ? 'md:-translate-x-96 md:w-0'
-            : 'translate-x-0 md:w-[67vw] lg:w-[60vw]'
+            : 'translate-x-0 md:w-[68vw] lg:w-[60vw]'
         } ${props.className ?? ''}`}
         ref={containerRef}
       >
