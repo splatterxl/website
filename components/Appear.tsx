@@ -1,25 +1,62 @@
 import React from 'react';
+import useBreakpoint from 'use-breakpoint';
 
 export const Appear: React.FC<{
   duration: number;
-  doWidth?: boolean;
   className?: string;
-}> = ({ children, duration = 0.8, doWidth, ...props }) => {
-  const [isMounted, setIsMounted] = React.useState(false);
+}> = ({ children, duration = 0.8, ...props }) => {
+  const [isMounted, setIsMounted] = React.useState(false),
+    [containerRef, opacityRef] = [
+      React.useRef<HTMLDivElement>(null),
+      React.useRef<HTMLDivElement>(null),
+    ];
+  // { breakpoint } = useBreakpoint(
+  //   {
+  //     desktop: 1028,
+  //     tablet: 768,
+  //     mobile: 0,
+  //   },
+  //   'desktop'
+  // );
 
   React.useEffect(() => {
+    if (isMounted) return;
+
     setIsMounted(true);
+
+    setTimeout(() => {
+      if (containerRef.current) {
+        // remove transition duration that conflicts with the theme transition
+        containerRef.current.className = 'md:w-[70vw] lg:w-[60vw]';
+      }
+
+      if (opacityRef.current) {
+        opacityRef.current.className = '';
+      }
+    }, 600);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <>
       <div
         {...props}
-        className={`transition-all duration-500 ${
-          !isMounted ? 'w-0 -translate-x-96' : 'translate-x-0 w-[64rem]'
+        className={`md:transition-all md:duration-300 ${
+          !isMounted
+            ? 'md:-translate-x-96 md:w-0'
+            : 'translate-x-0 md:w-[70vw] lg:w-[60vw]'
         } ${props.className ?? ''}`}
+        ref={containerRef}
       >
-        {children}
+        <div
+          className={`transition-all delay-[150ms] duration-300 ${
+            !isMounted ? 'opacity-0' : 'opacity-100'
+          }`}
+          ref={opacityRef}
+        >
+          {children}
+        </div>
       </div>
     </>
   );
