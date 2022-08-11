@@ -22,18 +22,3 @@ a {
 .top-screen {
   top: calc(100vh - 100px);
 }
-
-#container {
-  border-left: 8px solid black;
-}
-
-[data-theme='dark'] #container {
-  border-left-color: white;
-}
-
-@media (max-width: /* tablet */ 768px) {
-  #container {
-    border: none;
-    margin: none;
-  }
-}

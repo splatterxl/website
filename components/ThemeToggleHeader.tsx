@@ -5,14 +5,14 @@ export const ThemeToggleHeader: React.FC = () => {
 
   return (
     <header
-      className="flex flex-row justify-start pb-1 group md:w-full hover:cursor-pointer"
+      className="flex flex-row justify-center md:justify-start pb-1 group w-auto md:w-full hover:cursor-pointer"
       onClick={() =>
         setTimeout(() => {
           setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
         }, 150)
       }
     >
-      <h1 className="text-5xl xxs:text-7xl md:text-9xl font-bold select-none group-active:translate-y-1">
+      <h1 className="text-[3.6rem] leading-none md:text-7xl font-bold select-none text-center md:text-left group-active:translate-y-1">
         Splatterxl
       </h1>
       {/* <span
