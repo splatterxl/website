@@ -12,7 +12,7 @@ export const ThemeToggleHeader: React.FC = () => {
         }, 150)
       }
     >
-      <h1 className="text-[3.6rem] leading-none md:text-7xl font-bold select-none text-center md:text-left group-active:translate-y-1">
+      <h1 className="text-[3.6rem] leading-tight md:text-7xl font-bold select-none text-center md:text-left group-active:translate-y-1">
         Splatterxl
       </h1>
       {/* <span
