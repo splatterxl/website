@@ -39,7 +39,7 @@ export const Appear: React.FC<{
         ref={containerRef}
       >
         <div
-          className={`transition-all delay-[200ms] duration-300 ${
+          className={`transition-all delay-[200ms] duration-500 md:duration-300 ${
             !isMounted ? 'opacity-0' : 'opacity-100'
           }`}
           ref={opacityRef}
