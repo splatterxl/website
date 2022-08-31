@@ -22,8 +22,7 @@ const Home: NextPage = () => {
             <Appear duration={0.8}>
               <ThemeToggleHeader />
               <p className="mt-0 text-center md:text-left select-none md:w-full xxs:px-10 sm:px-14 md:px-0">
-                Backend engineer, frontend designer and almost everything in
-                between.
+                Breaking production code since 2020. Backend, frontend, everything else.
               </p>
               <Icons />
             </Appear>
