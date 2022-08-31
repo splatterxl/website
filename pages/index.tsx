@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         <div className="w-full h-screen flex flex-col justify-center items-center p-12 bg-gradient-to-tr from-slate-300 to-white dark:from-slate-900 dark:to-slate-700 dark:text-slate-50 transition ease-in-out duration-300">
           <div
             id="container"
-            className="flex flex-col items-center justify-center md:border-l-black dark:md:border-l-white md:border-l-8 md:pl-12 pb-4 pt-1 h-48 mx-6 md:ml-4 md:mr-0"
+            className="flex flex-col items-center justify-center md:border-l-black dark:md:border-l-white md:border-l-8 md:pl-6 lg:pl-16 pb-4 pt-1 h-48 mx-6 md:ml-4 md:mr-0"
           >
             <Appear duration={0.8}>
               <ThemeToggleHeader />
