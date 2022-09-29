@@ -11,11 +11,7 @@ export default function About() {
       </Head>
 
       <div className="w-full h-screen flex flex-col justify-center items-center p-12 bg-slate-50">
-        <Appear
-          duration={0.5}
-        >
-          the
-        </Appear>
+        <Appear duration={0.5}>the</Appear>
       </div>
     </>
   );

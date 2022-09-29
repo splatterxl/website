@@ -5,6 +5,10 @@ export const Meta: React.FC<{ page?: string }> = ({ page }) => (
       content={page ? `Splatterxl | ${page}` : 'Splatterxl'}
     />
     <meta
+      name="og:description"
+      content="Backend engineer and web designer, occasional gamer."
+    />
+    <meta
       name="description"
       content="Backend engineer and web designer, occasional gamer."
     />
