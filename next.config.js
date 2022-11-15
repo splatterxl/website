@@ -8,6 +8,11 @@ const nextConfig = {
         destination: '/',
         permanent: false,
       },
+      {
+        source: '/blog',
+        destination: 'https://blog.splt.dev',
+        permanent: false,
+      }
     ];
   },
 };
