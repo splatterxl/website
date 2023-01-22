@@ -15,7 +15,7 @@ const links = [
 
 export const Icons: React.FC = () => {
   return (
-    <div className="flex flex-row justify-center md:justify-start items-center mt-3 ml-2 gap-1 w-full">
+    <div className="flex flex-row justify-center md:justify-start items-center mt-3 md:ml-2 gap-1 w-full">
       {links.map((link) => (
         <Link key={link.url} href={link.url} passHref>
           <a
