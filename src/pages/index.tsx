@@ -23,7 +23,7 @@ const Home: NextPage = () => {
               <ThemeToggleHeader />
               <p className="mt-0 text-center md:text-left select-none md:w-full xxs:px-10 sm:px-14 md:px-0">
                 Programming since 2020. Backend, frontend,
-                everything else.
+                everything else. <a rel="me" href="https://uwu.social/@splatterxl"></a>
               </p>
               <Icons />
             </Appear>
