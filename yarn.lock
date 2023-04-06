@@ -227,6 +227,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/canvas-confetti@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "@types/canvas-confetti@npm:1.6.0"
+  checksum: e1bd2bc81e4d6ec6241982a4087ed90a3c21f858390dda7cb68e8aeb1df5573fc7c263ea4272397d2b39f0e78dcd192e8ba4a93c182ff29f80ea74073aaee496
+  languageName: node
+  linkType: hard
+
 "@types/json5@npm:^0.0.29":
   version: 0.0.29
   resolution: "@types/json5@npm:0.0.29"
@@ -3077,6 +3084,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "splatterxl.github.io@workspace:."
   dependencies:
+    "@types/canvas-confetti": ^1.6.0
     "@types/node": 17.0.23
     "@types/react": 17.0.43
     "@types/react-dom": 17.0.14
