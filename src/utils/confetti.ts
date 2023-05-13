@@ -19,13 +19,13 @@ export function fireConfetti(
   confetti(
     Object.assign({}, defaults, opts, {
       particleCount: Math.floor(count * particleRatio),
-      origin: { y: 1, x: window.screenLeft },
+      origin: { y: 1 },
     })
   );
   confetti(
     Object.assign({}, defaults, opts, {
       particleCount: Math.floor(count * particleRatio),
-      origin: { y: 1 },
+      origin: { y: 1, x: 0 },
     })
   );
 }

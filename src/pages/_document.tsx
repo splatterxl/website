@@ -8,10 +8,9 @@ export default function Document() {
           rel="icon"
           href="/assets/e0e3e0f61d042aa38595bc8e09f2b687c0ec519c.png"
         />
-        <script>
-        </script>
+        <script></script>
       </Head>
-      <body>
+      <body style={{ backgroundColor: '#233044' }}>
         <Main />
         <NextScript />
       </body>
