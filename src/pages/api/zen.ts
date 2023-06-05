@@ -49,7 +49,18 @@ export const zens = [
 
 export default function handler(
   _: NextApiRequest,
-  res: NextApiResponse<string>
+  res: NextApiResponse<{ message: string; source: string }>
 ) {
-  res.status(200).send(zens[Math.floor(Math.random() * zens.length)]);
+  res.status(200).send(getZen()!);
+}
+
+export function getZen(index?: number) {
+  const [source, ...tail] =
+    zens[index ?? Math.floor(Math.random() * zens.length)]
+      ?.split('. ')
+      .reverse() ?? [];
+
+  if (!source || !tail.length) return null;
+
+  return { message: tail.join('. ') + '.', source };
 }

@@ -6,7 +6,11 @@ export const ThemeToggleHeader: React.FC = () => {
 
   return (
     <header
-      className="flex flex-row justify-center md:justify-start pb-1 group w-auto md:w-full hover:cursor-pointer"
+      className="flex flex-row justify-center md:justify-start pb-1 group w-auto md:w-full hover:cursor-pointer "
+      style={{
+        fontFamily:
+          "'Righteous', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
+      }}
       onClick={() => {
         confettiBurst(100);
 

@@ -8,8 +8,7 @@ export const BouncingDownArrow: React.FC<{ i?: number }> = ({ i = 1 }) => {
       strokeWidth="0"
       viewBox="0 0 24 24"
       focusable="false"
-      height="1.5em"
-      width="1.5em"
+      // boxSize="1.5em"
       xmlns="http://www.w3.org/2000/svg"
       className="h-6 w-6 block mt-12 cursor-pointer animate-bounce"
       onClick={() => {
