@@ -12,8 +12,8 @@ const Home: NextPage<{ zen: { message: string; source: string } }> = ({
   return (
     <>
       <Head>
-        <Meta />
-        <title>Splatterxl</title>
+        <Meta h />
+        <title>hhhhhhhhh</title>
       </Head>
 
       <main className="top-0 left-0 absolute w-full bg-gradient-to-t from-slate-300 to-white dark:from-slate-900 dark:to-slate-800 dark:text-slate-50 transition ease-in-out duration-300 flex justify-center items-center">
