@@ -18,7 +18,7 @@ export const HHeader: React.FC = () => {
       </h1>
       <Link
         href="/"
-        className="text-[2rem] sm:text-[3.6rem] md:text-8xl select-none font-bold pb-1"
+        className="text-[2rem] sm:text-[3.6rem] md:text-8xl select-none font-bold pb-1 hidden md:inline"
       >
         .
       </Link>
