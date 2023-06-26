@@ -17,16 +17,16 @@ const Home: NextPage<{ zen: { message: string; source: string } }> = ({
       </Head>
 
       <main className="top-0 left-0 absolute w-full bg-gradient-to-t from-slate-300 to-white dark:from-slate-900 dark:to-slate-800 dark:text-slate-50 transition ease-in-out duration-300 flex justify-center items-center">
-        <header className="flex flex-col min-h-[100vh] min-w-[90vw] w-full sm:min-w-0 md:max-w-[90vw] lg:max-w-[60vw] px-12 justify-start items-center p-12 pb-12 pt-32">
+        <header className="flex flex-col min-h-[100vh] min-w-[90vw] w-full sm:min-w-0 md:max-w-[90vw] lg:max-w-[60vw] px-12 justify-start items-center p-12 pb-12 pt-16 sm:pt-32">
           <ThemeToggleHeader />
 
           <p className="mt-2 text-center md:text-left md:w-full xxs:px-10 sm:px-14 md:px-0">
             Hello! You&apos;ve found my little corner of the internet. I&apos;m
             a student & programmer from{' '}
-            <span className="text-lime-400">Ire</span>
+            <span className="text-lime-600 dark:text-lime-400">Ire</span>
             <span>la</span>
-            <span className="text-orange-400">nd</span>, and I&apos;m passionate
-            about Open Source software.
+            <span className="text-orange-600 dark:text-orange-400">nd</span>,
+            and I&apos;m passionate about Open Source software.
           </p>
 
           <p className="mt-3 text-center md:text-left md:w-full xxs:px-10 sm:px-14 md:px-0">
