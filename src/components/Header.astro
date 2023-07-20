@@ -1,30 +1,4 @@
 ---
-<<<<<<< HEAD
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
----
-
-<header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
-	</nav>
-</header>
-<style>
-	header {
-		margin: 0em 0 2em;
-	}
-	h2 {
-		margin: 0.5em 0;
-	}
-</style>
-=======
 import Logo from './Logo.astro'
 import Nav from './Nav.astro'
 
@@ -38,6 +12,18 @@ const { current = '' } = Astro.props;
     max-width: 1400px;
     padding: 2em;
     width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1em;
+  }
+
+  @media (max-width: 500px) {
+      header {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      }
   }
 </style>
 
@@ -45,4 +31,3 @@ const { current = '' } = Astro.props;
   <Logo />
   <Nav current={current} />
 </header>
->>>>>>> 3cf121b... Initial commit from Astro

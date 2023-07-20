@@ -1,22 +1,4 @@
-<<<<<<< HEAD
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
-body {
-	font-family: Verdana, sans-serif;
-	margin: auto;
-	padding: 20px;
-	max-width: 65ch;
-	text-align: left;
-	background-color: #fff;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	line-height: 1.5;
-	color: #444;
-}
-=======
+
 :root {
   --background-body: #fff;
   --text-main: #36393b;
@@ -26,12 +8,15 @@ body {
   --font-family-sans: 'Fira Sans', sans-serif;
 }
 
-:root.theme-dark {
-  --background-body: #202122;
-  --text-main: #fff;
-  --text-secondary: #ccc;
-  --primary-color: #548e9b;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-body: #202122;
+    --text-main: #fff;
+    --text-secondary: #ccc;
+    --primary-color: #548e9b;
+  }
 }
+
 
 *,
 *:before,
@@ -48,58 +33,11 @@ body {
   color: var(--text-main);
 }
 
->>>>>>> 3cf121b... Initial commit from Astro
 h1,
 h2,
 h3,
 h4,
 h5,
-<<<<<<< HEAD
-h6,
-strong,
-b {
-	color: #222;
-}
-a {
-	color: #3273dc;
-}
-nav a {
-	margin-right: 10px;
-}
-textarea {
-	width: 100%;
-	font-size: 16px;
-}
-input {
-	font-size: 16px;
-}
-content {
-	line-height: 1.6;
-}
-table {
-	width: 100%;
-}
-img {
-	max-width: 100%;
-	height: auto;
-}
-code {
-	padding: 2px 5px;
-	background-color: #f2f2f2;
-}
-pre {
-	padding: 1rem;
-}
-pre > code {
-	all: unset;
-}
-blockquote {
-	border: 1px solid #999;
-	color: #222;
-	padding: 2px 0px 2px 20px;
-	margin: 0px;
-	font-style: italic;
-=======
 h6 {
   font-family: var(--font-family-sans);
   font-weight: 700;
@@ -134,6 +72,25 @@ h6 {
   font-size: 1.2em;
 }
 
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+  color: var(--text-secondary)
+}
+
 p,
 ul,
 ol {
@@ -159,12 +116,8 @@ li p {
 }
 
 a {
-  color: inherit;
   transition: color linear 0.15s;
-}
-
-a:hover {
-  color: var(--primary-color);
+  color: var(--text-secondary);
 }
 
 p a {
@@ -268,48 +221,6 @@ td {
   margin: 1em 0;
 }
 
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  height: 100%;
-  padding: 0.33em 0.67em;
-  padding-top: 8px;
-  margin-left: 10px;
-  gap: 0.6em;
-  border-radius: 99em;
-  background-color: var(--theme-code-inline-bg);
-}
-
-.theme-toggle > label:focus-within {
-  outline: 2px solid transparent;
-  box-shadow: 0 0 0 0.08em var(--theme-accent), 0 0 0 0.12em white;
-}
-
-.theme-toggle > label {
-  color: var(--theme-code-inline-text);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.5;
-  cursor: pointer;
-}
-
-.theme-toggle .checked {
-  color: var(--theme-accent);
-  opacity: 1;
-}
-
-input[name='theme-toggle'] {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-}
-
 @media (max-width: 1020px) {
   h1 {
     font-size: 3em;
@@ -331,5 +242,10 @@ input[name='theme-toggle'] {
     font-size: 1.2rem;
     margin: 1em 0;
   }
->>>>>>> 3cf121b... Initial commit from Astro
+}
+
+#site-logo {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
 }

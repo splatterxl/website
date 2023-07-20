@@ -1,11 +1,11 @@
-import { defineConfig } from 'astro/config'
-import svelte from '@astrojs/svelte'
-import mdx from '@astrojs/mdx'
+import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
+import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-blog-template.netlify.app',
-  integrations: [mdx(), svelte()],
+  site: 'https://splt.dev',
+  integrations: [mdx(), react()],
   markdown: {
     shikiConfig: {
       theme: 'nord',
@@ -16,8 +16,16 @@ export default defineConfig({
         'rehype-external-links',
         {
           target: '_blank',
+          rel: ['noopener', 'noreferrer'],
+        },
+      ],
+      'rehype-slug',
+      [
+        'rehype-autolink-headings',
+        {
+          behavior: 'wrap',
         },
       ],
     ],
   },
-})
+});

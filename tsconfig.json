@@ -1,18 +1,11 @@
 {
-<<<<<<< HEAD
-  "extends": "astro/tsconfigs/strict",
-  "compilerOptions": {
-    "strictNullChecks": true
-  }
-=======
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true
-  },
-  "extends": "astro/tsconfigs/strict"
->>>>>>> 3cf121b... Initial commit from Astro
+    "noEmit": true,
+    "jsx": "react"
+  }
 }
