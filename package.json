@@ -1,33 +1,32 @@
 {
-  "name": "splatterxl.github.io",
-  "version": "0.1.0",
-  "private": true,
+  "name": "website",
+<<<<<<< HEAD
+  "type": "module",
+=======
+>>>>>>> 3cf121b... Initial commit from Astro
+  "version": "0.0.1",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+<<<<<<< HEAD
+  "dependencies": {
+    "@astrojs/mdx": "^0.19.7",
+    "@astrojs/rss": "^2.4.3",
+    "@astrojs/sitemap": "^2.0.1",
+    "astro": "^2.9.0"
+=======
+  "devDependencies": {
+    "@astrojs/mdx": "^0.8.3",
+    "@astrojs/svelte": "^1.0.0",
+    "astro": "^1.0.3",
+    "rehype-external-links": "^2.0.0"
   },
   "dependencies": {
-    "@types/canvas-confetti": "^1.6.0",
-    "canvas-confetti": "^1.6.0",
-    "next": "13",
-    "next-themes": "^0.2.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.4.0",
-    "swr": "^1.2.2"
-  },
-  "devDependencies": {
-    "@types/node": "17.0.23",
-    "@types/react": "17.0.43",
-    "@types/react-dom": "17.0.14",
-    "autoprefixer": "^10.4.7",
-    "eslint": "8.12.0",
-    "eslint-config-next": "12.1.4",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.4",
-    "typescript": "4.6.3"
-  },
-  "packageManager": "pnpm@8.6.5"
+    "reading-time": "^1.5.0"
+>>>>>>> 3cf121b... Initial commit from Astro
+  }
 }
