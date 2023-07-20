@@ -2,12 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url(/assets/JetBrainsMono-VariableFont_wght.ttf)
+    format('truetype-variations');
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 
 a {
@@ -34,4 +39,8 @@ a {
   top: -50px; /* Hide the navbar 50 px outside of the top view */
   width: 100%; /* Full width */
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+.text-link {
+  @apply decoration-slate-400 decoration-1 underline-offset-4 underline;
 }

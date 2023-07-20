@@ -7,16 +7,16 @@ import '../utils/console';
 // When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
 
 function scrollFunction() {
-  const navbar = document.getElementsByTagName('header')?.[0];
+  const navbar = document.getElementById('header');
 
   if (navbar) {
     if (
       document.body.scrollTop > window.innerHeight - 10 ||
       document.documentElement.scrollTop > window.innerHeight - 10
     ) {
-      navbar.style.position = 'fixed';
+      navbar.style.visibility = 'visible  ';
     } else {
-      navbar.style.position = 'relative';
+      navbar.style.visibility = 'hidden';
     }
   }
 }

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { confettiBurst } from '../utils/confetti';
 import { Icons } from './Icons';
 
-export const ThemeToggleHeader: React.FC = () => {
+export const HHeader: React.FC = () => {
   const { setTheme, resolvedTheme } = useTheme();
 
   return (
@@ -12,18 +12,18 @@ export const ThemeToggleHeader: React.FC = () => {
         onClick={() => {
           confettiBurst(100);
         }}
-        className="text-[2rem] sm:text-[3.6rem] leading-none mb-1 md:leading-none md:text-8xl font-bold text-center md:text-left"
+        className="text-[2rem] sm:text-[3.6rem] leading-none mb-1 md:leading-none md:text-8xl font-bold select-none text-center md:text-left"
       >
-        Splatterxl
+        {'h'.repeat(7)}
       </h1>
       <Link
-        href="/h"
+        href="/"
         className="text-[2rem] sm:text-[3.6rem] md:text-8xl select-none font-bold pb-1 hidden md:inline"
       >
         .
       </Link>
 
-      <div className="md:pb-4 flex-col justify-center align-center hidden md:inline">
+      <div className="md:pb-5 flex-col justify-center align-center hidden md:inline">
         <Icons />
       </div>
 

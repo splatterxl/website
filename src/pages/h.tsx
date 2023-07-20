@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Icons } from '../components/Icons';
 import { Meta } from '../components/Meta';
-import { ThemeToggleHeader } from '../components/ThemeToggleHeader';
+import { HHeader } from '../components/hToggleHeader';
 import { getZen } from './api/zen';
 
 const Home: NextPage<{ zen: { message: string; source: string } }> = ({
@@ -12,61 +12,48 @@ const Home: NextPage<{ zen: { message: string; source: string } }> = ({
   return (
     <>
       <Head>
-        <Meta />
-        <title>Splatterxl</title>
+        <Meta h />
+        <title>hhhhhhhhh</title>
       </Head>
 
       <main className="top-0 left-0 absolute w-full bg-gradient-to-t from-slate-300 to-white dark:from-slate-900 dark:to-slate-800 dark:text-slate-50 transition ease-in-out duration-300 flex justify-center items-center">
-        <header className="flex flex-col min-h-[100vh] min-w-[90vw] w-full sm:min-w-0 md:max-w-[90vw] lg:max-w-[60vw] px-12 justify-start items-center p-12 pb-12 pt-16 sm:pt-32">
-          <ThemeToggleHeader />
+        <header className="flex flex-col min-h-[100vh] min-w-[90vw] w-full sm:min-w-0 md:max-w-[90vw] lg:max-w-[60vw] px-12 justify-start items-center p-12 pb-12 pt-32">
+          <HHeader />
 
           <p className="mt-2 text-center md:text-left md:w-full xxs:px-10 sm:px-14 md:px-0">
-            Hello! You&apos;ve found my little corner of the internet. I&apos;m
-            a student & programmer from{' '}
-            <span className="text-lime-600 dark:text-lime-400">Ire</span>
-            <span>la</span>
-            <span className="text-orange-600 dark:text-orange-400">nd</span>,
-            and I&apos;m passionate about Open Source software.
+            {'h'.repeat(70)}
+            <span className="text-lime-400">h</span>
+            <span>h</span>
+            <span className="text-orange-400">h</span>hhhh, {'h'.repeat(33)}
+          </p>
+
+          <p className="mt-2 text-center md:text-left md:w-full xxs:px-10 sm:px-14 md:px-0">
+            {'h'.repeat(70)}. {'h'.repeat(3)} {'h'.repeat(30)}
+          </p>
+          <p className="mt-2 text-center md:text-left md:w-full xxs:px-10 sm:px-14 md:px-0">
+            {'h'.repeat(60)}. {'h'.repeat(15)} {'h'.repeat(70)}
           </p>
 
           <p className="mt-3 text-center md:text-left md:w-full xxs:px-10 sm:px-14 md:px-0">
-            I&apos;m mostly a fullstack developer but most of my work currently
-            happens for personal projects. I do have a few repositories on my{' '}
-            <Link
-              href="https://github.com/splatterxl"
-              className="text-link external"
-            >
-              GitHub profile
-            </Link>
-            .
-          </p>
-
-          <p className="mt-3 text-center md:text-left md:w-full xxs:px-10 sm:px-14 md:px-0">
-            I specialise in creating web applications in TypeScript using React,
-            and REST APIs. I have experience using NoSQL based databases like
-            MongoDB, and limited experience using SQL-based databases.
-          </p>
-
-          <p className="mt-3 text-center md:text-left md:w-full xxs:px-10 sm:px-14 md:px-0">
-            Contact:{' '}
+            hhhhhh:{' '}
             <Link href="https://github.com/splatterxl" className="text-link">
-              GitHub
+              hhhhhh
             </Link>{' '}
             |{' '}
             <Link href="https://twitter.com/wontfixbug" className="text-link">
-              Twitter
+              hhhhhhhh
             </Link>{' '}
             |{' '}
             <Link href="https://t.me/at_someone" className="text-link">
-              Telegram
+              hhhhhh
             </Link>{' '}
             |{' '}
             <Link href="https://ko-fi.com/splatterxl" className="text-link">
-              Ko-fi
+              hhhh
             </Link>{' '}
             |{' '}
             <Link href="mailto:contact@splt.dev" className="text-link">
-              Email
+              hhhhhh
             </Link>
           </p>
 
