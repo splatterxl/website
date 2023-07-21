@@ -1,28 +1,28 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const title = 'My Astro Blog';
-const description = 'The perfect starter for your perfect blog.';
+const title = 'Splatterxl';
+const description = 'Crafting innovative experiences through code.';
 const permalink = Astro.site.href;
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink}>
   <div class="home-container">
-    <div class="home-copy">
-      <h1>Welcome to your new Astro Blog</h1>
-      <p>Check out the docs on <a href="https://www.github.com/Charca/astro-blog-template" target="_blank" rel="noopener">GitHub</a> to get started.</p>
-    </div>
-
-    <div class="hero-image-container">
-      <picture>
-        <source srcset="/assets/home-illustration.webp" media="(min-width: 600px)">
-        <img class="hero-image" alt="Illustration of person reading a book" src="/assets/home-illustration-small.webp" width="550" height="466">
-      </picture>
-      <p class="caption">
-        Illustration by
-        <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" target="_blank" rel="noopener">Icons 8</a>
-        from
-        <a href="https://icons8.com/illustrations" target="_blank" rel="noopener">Ouch!</a>
+    <h1>Splatterxl</h1>
+    <p>Crafting innovative experiences through code.</p>
+  </div>
+  <div class="about-container">
+    <div class="home-about">
+      <p>
+        Welcome to my digital playground! I'm a passionate developer hailing
+        from the picturesque landscapes of Ireland.
+      </p><p>
+        I find inspiration in the adorable world of red pandas, channeling their
+        playfulness into every line of code I write. My goal is to create
+        unique, immersive experiences that leave a lasting impact.
+      </p><p>
+        Let's dive deep into the intricacies of programming, explore new
+        possibilities, and bring forth innovative solutions.
       </p>
     </div>
   </div>
@@ -30,70 +30,30 @@ const permalink = Astro.site.href;
 
 <style>
   .home-container {
-    align-items: center;
     display: flex;
-    flex: 1;
-    justify-content: center;
-    margin: 2em 0;
-    min-height: 400px;
-  }
-
-  .home-copy {
-    flex: 1;
-    padding: 0 1em;
-  }
-
-  .home-copy h1 {
-    font-weight: 700;
-    margin-bottom: 0.5em;
-    line-height: 1.3;
-  }
-
-  .home-copy p {
-    font-size: 1.4em;
-  }
-
-  .hero-image-container {
-    margin: 0 1em;
-    text-align: center;
-  }
-
-  .hero-image-container picture {
-    display: block;
-    min-height: 250px;
-  }
-
-  .caption {
-    font-size: .8em;
-    font-style: italic;
-    text-align: left;
-  }
-
-  .hero-image {
     width: 100%;
-    max-width: 550px;
+    min-height: 80vh;
     margin-bottom: 1em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 4rem;
   }
 
-  @media (max-width: 1200px) {
-    p {
-      font-size: 1.2em;
-    }
-
-    .hero-image {
-      max-width: 400px;
-    }
+  .home-container h1 {
+    font-family:
+      ui-serif,
+      Georgia,
+      Cambria,
+      Times New Roman,
+      Times,
+      serif;
+    font-size: 6rem;
+    margin: 0;
   }
 
-  @media (max-width: 800px) {
-    .home-container {
-      flex-direction: column;
-    }
-
-    .home-copy {
-      flex: 0;
-      padding-bottom: 2em;
-      text-align: center;
-    }
+  .home-container p {
+    font-size: 1.5rem;
+    margin: 0;
   }
 </style>
