@@ -1,6 +1,6 @@
 ---
 title: Astro
-publishDate: 20 Jul 2023
+publishDate: 30 Jul 2023
 description: The fourth iteration of my site is here, and it's better than ever.   
 hero:
     src: /assets/blog/business-3d-dog-astronaut.png
@@ -15,7 +15,7 @@ is becoming outdated or boring, which seems to be pretty frequent.
 see my post detailing that iteration, [click here](/blog/simplicity).
 
 Sometimes, I see a site that I really, _really_ love and I [~~steal~~] get inspiration from it to redesign my own (like the last time),
-or I get reminded by some really [jawdropping](https://activetheory) websites that my work is futile and insignificant compared
+or I get reminded by some really [jawdropping](https://activetheory.net) websites that my work is futile and insignificant compared
 to the really talented designers out there :)
 
 So, naturally, I decided to try to fix that.
@@ -55,3 +55,19 @@ class to simple CSS media queries, and left it at that.
 
 In the previous version of my site, the main heading of the homepage acted as a theme toggle until I converted it to
 a confetti machine. 🎉
+
+# Homepage
+
+![Screenshot of the initial homepage](https://github.com/Charca/astro-blog-template/blob/main/screenshot.png?raw=true)
+
+The initial homepage from the template is pretty bland. It's basically just a link to the GitHub repo. So, I decided
+to completely rewrite it, and give writing raw CSS again a try.
+
+I decided to add a funky criss-cross pattern so I experimented with the `skewY` CSS effect and it turned out alright:
+
+![Screenshot of the new homepage](/assets/blog/new-homepage.png)
+
+# Conclusion
+
+I redesigned my website in Astro, and I'm pretty happy with how it turned out. I think it's gonna be the next big thing, 
+but as always with JavaScript framework there's no guarantees! :P
