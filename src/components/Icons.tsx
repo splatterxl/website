@@ -1,5 +1,10 @@
 import * as React from 'react';
-import { FaGithub, FaScroll, FaSteam, FaTwitter } from 'react-icons/fa';
+import {
+  FaGithub,
+  FaScroll,
+  FaSteam,
+  FaTwitter,
+} from '.pnpm/react-icons@4.10.1_react@18.2.0/node_modules/react-icons/fa/index.js';
 
 const links = [
   { icon: FaGithub, url: 'https://github.com/splatterxl', name: 'GitHub' },
